@@ -2,9 +2,9 @@
 
 
 This repository provides a reference implementation of **2FWL-SIRGN** as described in the paper:
-
+```
     2FWL-SIRGN: A Scalable Structural 2-dimensional Folklore Weisfeiler Lehman Graph Representation Learning Approach Via Structural Graph Partitioning
-
+```
 Justin Carpenter and Edoardo Serra.
 
 
@@ -23,30 +23,30 @@ If you find Temporal SIR-GN useful for your research, please cite the following 
 ```
 
 ## Requirements
-
+```
     numpy
     pandas
     sklearn
     math
     networkx
-
+```
 ## Install and Running
 
 To install, clone repository and install dependencies.
 
 This includes the MUTAG dataset in the directory "data/MUTAG/" Be sure to not alter the path unless altering the __main__ in the file 2FWL_SIRGN_GraphPartition.py :
-
+```
         'data/MUTAG/MUTAG_A.txt', list of edges in mutag
         'data/MUTAG/MUTAG_edge_labels.txt', list of edge labels
         'data/MUTAG/MUTAG_node_labels.txt', list of node labels
         'data/MUTAG/MUTAG_graph_indicator.txt', list of graph labels
-
+```
 Run using:
-
+```
         python3 2FWL_SIRGN_GraphPartition.py
-
+```
 2FWL_SIRGN_GraphPartition.py Paramiters: (Graph1, Graph2, filename, n, node_labels, partitions, iterations)    
-    
+```    
     -Graph1: The primary graph to preform the graph partition on and returns the 2FWL_SIR-GN embeddings.             
     -Graph2: The second graph is the same but is format friendly for SIR-GN to operate on for pre-embeddings.        
     -Filename: This is the path to save the pre-embeddings from SIR-GN for decreased time in future operations.      
@@ -54,7 +54,7 @@ Run using:
     -Node_labels: This is a list of all the nodes in the graph and their corresponding labels.                       
     -Partitions: This is the number of partitions to split the graph into to increase performance                    
     -Iterations: This is the number of iterations to do the 2FWL-SIRGN algorithm on the graph   
-
+```
 
 ## Details
 
