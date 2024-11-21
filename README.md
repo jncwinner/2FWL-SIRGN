@@ -12,6 +12,12 @@ The 2FWL-SIRGN algorithm generates accurate structural node representations for 
 
 The cost of higher-order approaches, tend to outweigh the improvements in expresivity power. Due to this limitation, This repository provides a reference implementation of **Structural Graph Partition** allowing 2FWL-SIRGN to still operate on very large graphs.
 
+## Structural Graph Partition
+
+This repository provides a new approach to partition large scale connected/disconnected graphs without the loss of important structural information. The approach can be implemented into any sized graph with the usage of common practice 
+database structures and a loader for proper graph formating. The Algorithm included is an implementation of SIR-GN that utilizes a higher-order Weisfiler Lehman, 2 dimensional FWL. The cost of higher-order approaches, tend to outweigh
+the improvements in expresivity power. This is why, with the application of graph partitioning, we can still operate on very large graphs. 
+
 ## Citation
 If you find Temporal SIR-GN useful for your research, please cite the following paper:
 ```bibtex
