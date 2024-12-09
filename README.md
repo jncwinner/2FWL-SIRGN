@@ -74,7 +74,7 @@ Replace dataset and specify the configuration file for your desired parameters i
   
 --N: This is the number of features for each node.
  
---dataset: Dataset name (e.g., Cora, PubMed, Reddit).
+--dataset: Dataset name (e.g., Mutag, Proteins, squirrel).
 
 --num_partitions: Number of graph partitions.
 
