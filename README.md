@@ -34,7 +34,13 @@ git clone https://github.com/jncwinner/2FWL-SIRGN.git
 cd 2FWL-SIRGN
 
 # Install required dependencies
-pip install -r requirements.txt
+```
+    numpy
+    pandas
+    sklearn
+    math
+    networkx
+```
 
 Ensure you have Python 3.8+ installed.
 
@@ -74,13 +80,6 @@ Replace dataset and specify the configuration file for your desired parameters i
 
 --iterations: Number of 2FWL iterations.
 ```
-## Details
-
-For the example in this directory the program runs for with 20 partitions and 10 iterations on the MUTAG dataset with this command:
-```
-python main.py --dataset <dataset_name> 
-```
-
 ## Output
 
 Upon completion the program will store the finished embeddings to 'FWL_SIRGN_GRAPH_PARTITION_MUTAG_10_20_10.txt' with an additional file 'SIRGN_embeddings_MUTAG_10_20_10.txt' which contains the original SIR-GN embeddings. 
@@ -122,37 +121,5 @@ Contributions are welcome! If you'd like to improve the codebase or add features
 
 This project is licensed under the MIT License. See LICENSE for more details.
 
-
-
-
-This includes the MUTAG dataset in the directory "data/MUTAG/" Be sure to not alter the path unless altering the __main__ in the file 2FWL_SIRGN_GraphPartition.py :
-```
-        'data/MUTAG/MUTAG_A.txt', list of edges in mutag
-        'data/MUTAG/MUTAG_edge_labels.txt', list of edge labels
-        'data/MUTAG/MUTAG_node_labels.txt', list of node labels
-        'data/MUTAG/MUTAG_graph_indicator.txt', list of graph labels
-```
-Run using:
-```
-        python3 2FWL_SIRGN_GraphPartition.py
-```
-2FWL_SIRGN_GraphPartition.py Paramiters: (Graph1, Graph2, filename, n, node_labels, partitions, iterations)    
-```    
-    -Graph1: The primary graph to preform the graph partition on and returns the 2FWL_SIR-GN embeddings.             
-    -Graph2: The second graph is the same but is format friendly for SIR-GN to operate on for pre-embeddings.        
-    -Filename: This is the path to save the pre-embeddings from SIR-GN for decreased time in future operations.      
-    -N: This is the number of hops away from each node to calculate.                                                 
-    -Node_labels: This is a list of all the nodes in the graph and their corresponding labels.                       
-    -Partitions: This is the number of partitions to split the graph into to increase performance                    
-    -Iterations: This is the number of iterations to do the 2FWL-SIRGN algorithm on the graph   
-```
-
-## Details
-
-By default the program runs for with 20 partitions and 10 iterations on the MUTAG dataset
-
-## Output
-
-Upon completion the program will store the finished embeddings to 'FWL_SIRGN_GRAPH_PARTITION_MUTAG_10_20_10.txt' with an additional file 'SIRGN_embeddings_MUTAG_10_20_10.txt' which contains the original SIR-GN embeddings. 
 
 This model should produce an F1 score of around .95 using default settings.
