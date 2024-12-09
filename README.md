@@ -1,10 +1,10 @@
 # 2FWL-SIRGN: Scalable Structural Graph Representation Learning
 
-Welcome to the official repository for 2FWL-SIRGN, a state-of-the-art scalable framework for structural graph representation learning. This project integrates the 2-dimensional Folklore Weisfeiler-Lehman (2FWL) algorithm with structural graph partitioning, offering an exceptional balance between computational efficiency and expressive power.
+Welcome to the official repository for 2FWL-SIRGN, a scalable framework for Higher-Order Weisfeiler-Lehman structural graph representation learning. This project integrates the 2-dimensional Folklore Weisfeiler-Lehman (2FWL) algorithm with structural graph partitioning, offering an exceptional balance between computational efficiency and expressive power.
 
 # Overview
 
-Graphs are fundamental in representing complex relationships in various domains, such as social networks, molecular chemistry, and knowledge graphs. Traditional approaches like the Weisfeiler-Lehman algorithm and k-WL extensions provide structural insights but are often computationally expensive for large-scale graphs.
+Graphs are fundamental in representing complex relationships in various domains, such as social networks, molecular chemistry, and knowledge graphs. Traditional approaches like k-dimensional Weisfeiler-Lehman algorithm and even the k-FWL extensions where ```k > 2``` provide structural insights but are often computationally expensive for large-scale graphs.
 
 ## 2FWL-SIRGN addresses these challenges by:
 
