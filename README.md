@@ -1,32 +1,32 @@
-2FWL-SIRGN: Scalable Structural Graph Representation Learning
+# 2FWL-SIRGN: Scalable Structural Graph Representation Learning
 
 Welcome to the official repository for 2FWL-SIRGN, a state-of-the-art scalable framework for structural graph representation learning. This project integrates the 2-dimensional Folklore Weisfeiler-Lehman (2FWL) algorithm with structural graph partitioning, offering an exceptional balance between computational efficiency and expressive power.
 
-Overview
+# Overview
 
 Graphs are fundamental in representing complex relationships in various domains, such as social networks, molecular chemistry, and knowledge graphs. Traditional approaches like the Weisfeiler-Lehman algorithm and k-WL extensions provide structural insights but are often computationally expensive for large-scale graphs.
 
-2FWL-SIRGN addresses these challenges by:
+## 2FWL-SIRGN addresses these challenges by:
 
-Employing the 2FWL algorithm to capture higher-order graph structures.
+* Employing the 2FWL algorithm to capture higher-order graph structures.
 
-Utilizing structural graph partitioning to reduce computational overhead while preserving structural fidelity.
+* Utilizing structural graph partitioning to reduce computational overhead while preserving structural fidelity.
 
-Enabling optional pre-compute phase to store graph partitions for future use.
+* Enabling optional pre-compute phase to store graph partitions for future use.
 
-Key Features
+## Key Features
 
-Scalability: Processes graphs of unprecedented size through efficient partitioning.
+- Scalability: Processes graphs of unprecedented size through efficient partitioning.
 
-Expressiveness: Captures rich structural information, including cliques and cycles, via the 2FWL framework.
+- Expressiveness: Captures rich structural information, including cliques and cycles, via the 2FWL framework.
 
-Flexibility: Supports a wide range of graph learning tasks, including node classification, link prediction, and graph classification.
+- Flexibility: Support for usage in a wide range of graph learning tasks, including node classification, link prediction, and graph classification.
 
-Performance: Outperforms existing methods in terms of computational cost and accuracy on large-scale benchmarks.
+- Performance: Outperforms existing methods in terms of computational cost and accuracy on large-scale benchmarks.
 
-Installation
+# Installation
 
-To set up the environment and dependencies for running the project, follow these steps:
+## To set up the environment and dependencies for running the project, follow these steps:
 
 
 # Clone the repository
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 Ensure you have Python 3.8+ installed.
 
-# Data Directory Configured.
+## Data Directory Configured.
 
 This includes the MUTAG dataset in the directory "data/MUTAG/" Be sure to not alter the path unless altering the __main__ in the file 2FWL_SIRGN_GraphPartition.py :
 ```
@@ -54,11 +54,11 @@ This includes the MUTAG dataset in the directory "data/MUTAG/" Be sure to not al
 
 Use the following command to execute the provided example datasets:
 ```
-python main.py --dataset <dataset_name> --config <config_file>
+ python3 2FWL_SIRGN_GraphPartition.py
 ```
-Replace <dataset_name> with one of the supported datasets (e.g., Cora, PubMed, Reddit) and specify the configuration file for your desired parameters.
+Replace dataset and specify the configuration file for your desired parameters in 2FWL_SIRGN_GraphPartition.py __main__.
 
-Key Parameters:
+## Key Parameters:
 ```
 --Graph1: The primary graph to preform the graph partition on and returns the 2FWL_SIR-GN embeddings.
       
